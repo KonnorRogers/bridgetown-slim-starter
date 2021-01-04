@@ -2,23 +2,24 @@ meta charset="utf-8"
 meta name="viewport" content="width=device-width, initial-scale=1.0"
 meta name="description" content="#{site.metadata.description}"
 
+- page_title = page.data[:title]
 
-/- page_title = capture do
-  strip_newlines(strip_html(page.data[:title]))
-/
-/ title
-/ - if page_title != ""
-/   = "#{page_title} | #{site.metadata.title}"
-/ - else
-/   = "#{metadata.title}: #{site.metadata.tagline}"
+title
+  - if page_title.nil?
+    = "#{site.metadata.title}: #{site.metadata.tagline}"
+  - else
+    = "#{page_title} | #{site.metadata.title}"
 
-/ - if ENV["BRIDGETOWN_ENV"] == "development"
-/ - else
+- js = "/frontend/javascript/index.js"
+- snowpack = "localhost:4002"
 
-javascript:
-  window.HMR_WEBSOCKET_URL = 'ws://localhost:4002';
+- if bridgetown.env == "development
+  javascript:
+    window.HMR_WEBSOCKET_URL = "ws://#{snowpack}";
+  script src="http://#{snowpack}#{js}" type="module"
 
-script src="http://localhost:4002/frontend/javascript/index.js" type="module"
+- else
+  script src="#{js}" type="module"
 
 
 
