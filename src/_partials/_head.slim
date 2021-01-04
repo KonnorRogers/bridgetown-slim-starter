@@ -14,7 +14,11 @@ meta name="description" content="#{site.metadata.description}"
 
 / - if ENV["BRIDGETOWN_ENV"] == "development"
 / - else
-script src="/frontend/javascript/index.js" type="module"
+
+javascript:
+  window.HMR_WEBSOCKET_URL = 'ws://localhost:4002';
+
+script src="http://localhost:4002/frontend/javascript/index.js" type="module"
 
 
 

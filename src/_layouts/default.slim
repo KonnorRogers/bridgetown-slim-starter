@@ -3,9 +3,8 @@ html lang="en"
   head
     == render "head"
 
-  body class="#{page.data[:layout]} #{page.data[:page_class]}"
+  body class="#{page.data[:layout]} #{page.data[:page_class]} bg-red-500"
     main
       == content
 
 
-  script src="/frontend/javascript/index.js" type="module"

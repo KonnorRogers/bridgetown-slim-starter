@@ -1,5 +1,2 @@
-(async () => {
-  if (import.meta.env.MODE === "development") {
-    await import('../styles/index.css')
-  }
-})()
+import'../styles/index.css'
+console.log("hi")
