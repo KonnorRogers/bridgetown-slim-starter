@@ -13,7 +13,7 @@
     "lint": "yarn lint:prettier && yarn lint:eslint",
     "format:prettier": "yarn prettier --write",
     "format:eslint": "yarn lint:eslint --fix",
-    "format": "eslint --fix frontend/**/*.js"
+    "format": "yarn format:prettier && yarn format:eslint"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
