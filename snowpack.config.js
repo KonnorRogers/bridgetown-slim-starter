@@ -1,19 +1,15 @@
 const mount = {
-  "src/assets/js": "/js",
-  "src/assets/styles": "/styles",
   output: "/",
 };
 
 const plugins = [
+  ["@snowpack/plugin-postcss"],
   [
     "@snowpack/plugin-run-script",
     {
       cmd: "bundle exec bridgetown build",
       watch: "$1 --watch",
     },
-  ],
-  [
-    "@snowpack/plugin-postcss",
   ],
 ];
 

@@ -1,0 +1,14 @@
+meta charset="utf-8"
+meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+- page_title = page.data[:title]
+
+title
+- if page_title != ""
+  = "#{page_title} | #{metadata.title}"
+- else
+  = "#{metadata.title}: #{metadata.tagline}"
+
+meta name="description" content="#{site.metadata.description}"
+
+script src="/assets/javascript/index.js" type="module" defer
