@@ -7,7 +7,13 @@
     "bridgetown-serve": "bundle exec bridgetown serve",
     "build": "NODE_ENV=production BRIDGETOWN_ENV=production snowpack build",
     "start": "snowpack dev",
-    "format": "eslint --fix --ext .js"
+    "prettier": "prettier **/*.{js,css,md,json} --ignore-path .gitignore",
+    "lint:prettier": "yarn prettier --check",
+    "lint:eslint": "eslint frontend/**/*.js --ignore-path .gitignore",
+    "lint": "yarn lint:prettier && yarn lint:eslint",
+    "format:prettier": "yarn prettier --write",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format": "eslint --fix frontend/**/*.js"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
@@ -15,6 +21,7 @@
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.1.0",
     "eslint": "^7.12.1",
+    "eslint-config-prettier": "^7.1.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
