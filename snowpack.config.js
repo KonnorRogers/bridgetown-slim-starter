@@ -1,6 +1,6 @@
 const mount = {
   frontend: "/frontend",
-  output: "/"
+  output: {url: "/", static: true}
 };
 
 const plugins = [
@@ -8,10 +8,11 @@ const plugins = [
   [
     "@snowpack/plugin-run-script",
     {
+      name: "[Bridgetown] Serve",
       cmd: "bundle exec bridgetown build",
-      watch: "$1 --watch",
-    },
-  ],
+      watch: "$1 --watch"
+    }
+  ]
 ];
 
 const installOptions = {

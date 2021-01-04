@@ -536,9 +536,9 @@ camelcase-css@^2.0.1:
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
 caniuse-lite@^1.0.30001165:
-  version "1.0.30001171"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001171.tgz#3291e11e02699ad0a29e69b8d407666fc843eba7"
-  integrity sha512-5Alrh8TTYPG9IH4UkRqEBZoEToWRLvPbSQokvzSz0lii8/FOWKG4keO1HoYfPWs8IF/NH/dyNPg1cmJGvV3Zlg==
+  version "1.0.30001173"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001173.tgz#3c47bbe3cd6d7a9eda7f50ac016d158005569f56"
+  integrity sha512-R3aqmjrICdGCTAnSXtNyvWYMK3YtV5jwudbq0T7nN9k4kmE4CBuwPqyJ+KBzepSTh0huivV2gLbSMEzTTmfeYw==
 
 chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
@@ -2790,7 +2790,7 @@ slice-ansi@^4.0.0:
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
 
-snowpack@^2.18.5:
+snowpack@^2.16.1:
   version "2.18.5"
   resolved "https://registry.yarnpkg.com/snowpack/-/snowpack-2.18.5.tgz#10a0130fb1eeecda6dfd3be1b1b60ff9849e3da4"
   integrity sha512-UThUbGXn/wN7zRJDVpbC0F3uvkhu6PAgpTbV1hdAaqLvYBewT794iEMAY5mMxT27zQ+ZOyqbICaBtKtq0BgDcA==
@@ -2970,9 +2970,9 @@ supports-color@^7.1.0:
     has-flag "^4.0.0"
 
 table@^6.0.4:
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/table/-/table-6.0.6.tgz#e9223f1e851213e2e43ab584b0fec33fb09a8e7a"
-  integrity sha512-OInCtPmDNieVBkVFi6C8RwU2S2H0h8mF3e3TQK4nreaUNCpooQUkI+A/KuEkm5FawfhWIfNqG+qfelVVR+V00g==
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/table/-/table-6.0.7.tgz#e45897ffbcc1bcf9e8a87bf420f2c9e5a7a52a34"
+  integrity sha512-rxZevLGTUzWna/qBLObOe16kB2RTnnbhciwgPbMMlazz1yZGVEgnZK762xyVdVznhqxrfCeBMmMkgOOaPwjH7g==
   dependencies:
     ajv "^7.0.2"
     lodash "^4.17.20"
