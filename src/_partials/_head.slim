@@ -11,14 +11,16 @@ title
     = "#{page_title} | #{site.metadata.title}"
 
 - js = "/frontend/javascript/index.js"
+- css = "/frontend/styles/index.css"
 - snowpack = "localhost:4002"
 
-- if bridgetown.env == "development
+- if Bridgetown.env == "development"
   javascript:
     window.HMR_WEBSOCKET_URL = "ws://#{snowpack}";
   script src="http://#{snowpack}#{js}" type="module"
 
 - else
+  <link rel="stylesheet" href="#{css}"
   script src="#{js}" type="module"
 
 
