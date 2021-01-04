@@ -1,41 +1,44 @@
 const mount = {
-  frontend: '/_frontend_',
-  output: '/'
-}
+  frontend: "/_frontend_",
+  output: "/",
+};
 
 const proxy = {
   // Account for users using Docker
-  '0.0.0.0:4000': '0.0.0.0:4000'
-}
+  "0.0.0.0:4000": "0.0.0.0:4000",
+};
 
 const plugins = [
   [
-    '@snowpack/plugin-run-script',
+    "@snowpack/plugin-run-script",
     {
-      cmd: 'bundle exec bridgetown build',
-      watch: '$1 --watch'
-    }
+      cmd: "bundle exec bridgetown build",
+      watch: "$1 --watch",
+    },
   ],
-  ['@snowpack/plugin-babel'],
-  ['@snowpack/plugin-build-script', { cmd: 'postcss', input: ['.css'], output: ['.css'] }]
-]
+  ["@snowpack/plugin-babel"],
+  [
+    "@snowpack/plugin-build-script",
+    { cmd: "postcss", input: [".css"], output: [".css"] },
+  ],
+];
 
 const installOptions = {
-  NODE_ENV: true
-}
+  NODE_ENV: true,
+};
 
 const devOptions = {
   // Default port of bridgetown
   port: 4000,
-  open: 'none',
+  open: "none",
   // Default output directory of Bridgetown
-  out: 'output'
-}
+  out: "output",
+};
 
 const buildOptions = {
   clean: true,
-  metaDir: ''
-}
+  metaDir: "",
+};
 
 module.exports = {
   mount,
@@ -43,5 +46,5 @@ module.exports = {
   plugins,
   installOptions,
   devOptions,
-  buildOptions
-}
+  buildOptions,
+};

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Your First Post on Bridgetown"
-date:   2021-01-03 20:20:20 -0500
+title: "Your First Post on Bridgetown"
+date: 2021-01-03 20:20:20 -0500
 categories: updates
 ---
 
@@ -21,6 +21,6 @@ def print_hi(name)
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-````
+```
 
 Check out the [Bridgetown docs](https://bridgetownrb.com/docs/) for more info on how to get the most out of Bridgetown. File all bugs/feature requests at [Bridgetown’s GitHub repo](https://github.com/bridgetownrb/bridgetown). If you have questions, you can ask them on [Bridgetown Discussions on GitHub](https://github.com/bridgetownrb/bridgetown/discussions).
