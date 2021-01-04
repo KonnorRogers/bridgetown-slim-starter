@@ -11,5 +11,13 @@ meta name="description" content="#{site.metadata.description}"
 /   = "#{page_title} | #{site.metadata.title}"
 / - else
 /   = "#{metadata.title}: #{site.metadata.tagline}"
-script src="/frontend/javascript/index.js" type="module" defer
+
+/ - if ENV["BRIDGETOWN_ENV"] == "development"
+/ - else
+  / script src="/frontend/javascript/index.js" type="module"
+
+
+script window.HMR_WEBSOCKET_URL = 'ws://localhost:4001'
+script src="http://localhost:4001/frontend/javascript/index.js" type="module"
+
 
