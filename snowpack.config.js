@@ -1,4 +1,5 @@
 const mount = {
+  frontend: "/frontend",
   output: "/",
 };
 
@@ -22,7 +23,7 @@ const devOptions = {
   port: 4000,
   open: "none",
   output: "stream",
-  hmrDelay: 500,
+  hmrDelay: 1000,
 };
 
 const buildOptions = {

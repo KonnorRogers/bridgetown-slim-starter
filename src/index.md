@@ -2,4 +2,4 @@
 layout: default
 ---
 
-Welcome to Bridgetown! Hi folks!
+Welcome to Bridgetown! Hi folks! Hi friends
