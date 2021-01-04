@@ -1,18 +1,10 @@
 const mount = {
   frontend: "/frontend",
-  output: {url: "/", static: true}
 };
 
 const plugins = [
-  ["@snowpack/plugin-postcss"],
-  [
-    "@snowpack/plugin-run-script",
-    {
-      name: "Bridgetown",
-      cmd: "bundle exec bridgetown serve",
-      watch: "$1 --watch"
-    }
-  ]
+  ["@snowpack/plugin-postcss"]
+  ["@snowpack/plugin-run-script"]
 ];
 
 const installOptions = {
@@ -29,7 +21,7 @@ const devOptions = {
 const buildOptions = {
   clean: true,
   metaDir: "",
-  out: "output",
+  out: "output/frontend",
 };
 
 module.exports = {
