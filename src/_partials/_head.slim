@@ -5,9 +5,9 @@ meta name="viewport" content="width=device-width, initial-scale=1.0"
 
 title
 - if page_title != ""
-  = "#{page_title} | #{metadata.title}"
+  = "#{page_title} | #{site.metadata.title}"
 - else
-  = "#{metadata.title}: #{metadata.tagline}"
+  = "#{metadata.title}: #{site.metadata.tagline}"
 
 meta name="description" content="#{site.metadata.description}"
 
