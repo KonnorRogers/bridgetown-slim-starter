@@ -1,0 +1,29 @@
+{
+  "name": "hoa-redesign-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "bridgetown-build": "BRIDGETOWN_ENV=production bundle exec bridgetown build",
+    "bridgetown-serve": "bundle exec bridgetown serve",
+    "build": "NODE_ENV=production BRIDGETOWN_ENV=production snowpack build",
+    "start": "snowpack dev",
+    "format": "eslint --fix --ext .js"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.1.0",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "postcss": "^8.2.2",
+    "postcss-import": "^14.0.0",
+    "postcss-loader": "^4.1.0",
+    "prettier": "^2.2.1",
+    "snowpack": "^2.18.5",
+    "tailwindcss": "^2.0.2"
+  }
+}
