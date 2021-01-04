@@ -8,23 +8,18 @@ const plugins = [
   [
     "@snowpack/plugin-run-script",
     {
-      cmd: "bundle exec bridgetown serve",
+      cmd: "bundle exec bridgetown build",
       watch: "$1 --watch",
     },
   ],
 ];
-
-const proxy = {
-  "/*": "127.0.0.1:4000"
-}
 
 const installOptions = {
   NODE_ENV: true,
 };
 
 const devOptions = {
-  // Default port of bridgetown
-  port: 4001,
+  port: 4000,
   open: "none",
   output: "stream",
   hmrDelay: 1000,
@@ -38,7 +33,6 @@ const buildOptions = {
 
 module.exports = {
   mount,
-  proxy,
   plugins,
   installOptions,
   devOptions,
