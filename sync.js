@@ -1,21 +1,32 @@
 const browserSync = require("browser-sync").create();
 
 // You can change these configuration values:
-const proxy = "http://localhost:4001"
+const bridgetownProxy = "http://localhost:4001"
+const snowpackProxy = "http://localhost:4002"
 const port = 4000
-const uiPort = 4002
+const uiPort = 4003
 
 // Browsersync
 browserSync.init({
-  open: false,
+  open: true,
   notify: false,
-  proxy: {
-    target: proxy,
-    proxyReq: [
-      function (proxyReq) {
-        proxyReq.setHeader('Access-Control-Allow-Origin', '*');
+  middleware: [
+    {
+      route: "/frontend",
+      handle: function(req, res, next) {
+        if (!(/^\/frontend/.test(req.url))) {
+          next()
+        }
+
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        req.url = snowpackProxy + "/" + req.url
+        res.end()
+        next()
       }
-    ]
+    }
+  ],
+  proxy: {
+    target: bridgetownProxy,
   },
   port: port,
   files: "output/index.html",
@@ -25,7 +36,7 @@ browserSync.init({
     scroll: false,
   },
   reloadDelay: 0,
-  injectChanges: true,
+  injectChanges: false,
   ui: {
     port: uiPort
   },

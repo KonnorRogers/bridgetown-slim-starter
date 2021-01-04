@@ -1,12 +1,9 @@
 const concurrently = require('concurrently');
 
-// By default, configure Bridgetown to use port 4001 so Browsersync can use 4000
-// See also Browsersync settings in sync.js
-
 // Concurrently
 concurrently([
-  { command: "NODE_ENV=development yarn snowpack build --watch", name: "Snowpack", prefixColor: "yellow" },
-  { command: "BRIDGETOWN_ENV=development bundle exec bridgetown serve --watch", name: "Bridgetown", prefixColor: "green" },
+  { command: "NODE_ENV=development yarn snowpack-serve", name: "Snowpack", prefixColor: "yellow" },
+  { command: "BRIDGETOWN_ENV=development yarn bridgetown-serve", name: "Bridgetown", prefixColor: "green" },
   { command: "yarn sync", name: "Live", prefixColor: "blue" }
 ], {
   restartTries: 3,

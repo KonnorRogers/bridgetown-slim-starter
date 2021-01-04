@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "bridgetown-build": "BRIDGETOWN_ENV=production bundle exec bridgetown build",
-    "bridgetown-serve": "bundle exec bridgetown serve",
+    "bridgetown-serve": "bundle exec bridgetown serve --port 4001",
     "snowpack-build": "NODE_ENV=production snowpack build",
-    "build": "bridgetown-build && snowpack-build",
-    "build": "NODE_ENV=production BRIDGETOWN_ENV=production snowpack build",
+    "snowpack-serve": "NODE_ENV=development snowpack dev",
+    "clean": "bundle exec bridgetown clean",
+    "build": "yarn clean && yarn bridgetown-build && yarn snowpack-build",
     "start": "node start",
     "sync": "node sync",
     "prettier": "prettier **/*.{js,css,md,json} --ignore-path .gitignore",
@@ -19,6 +20,7 @@
     "format": "yarn format:prettier && yarn format:eslint"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.1.3",
     "@snowpack/plugin-postcss": "^1.0.11",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",

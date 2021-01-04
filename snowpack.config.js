@@ -3,8 +3,7 @@ const mount = {
 };
 
 const plugins = [
-  ["@snowpack/plugin-postcss"]
-  ["@snowpack/plugin-run-script"]
+  ["@snowpack/plugin-postcss"],
 ];
 
 const installOptions = {
@@ -12,16 +11,15 @@ const installOptions = {
 };
 
 const devOptions = {
-  port: 4000,
+  port: 4002,
   open: "none",
   output: "stream",
-  hmrDelay: 300,
+  baseUrl: "/",
 };
 
 const buildOptions = {
-  clean: true,
-  metaDir: "",
-  out: "output/frontend",
+  metaDir: "frontend",
+  out: "output",
 };
 
 module.exports = {
