@@ -22,13 +22,12 @@ const devOptions = {
   port: 4000,
   open: "none",
   output: "stream",
-  hmrDelay: 300,
+  hmrDelay: 500,
 };
 
 const buildOptions = {
   clean: true,
   metaDir: "",
-  // Default output directory of Bridgetown
   out: "output",
 };
 

@@ -1,8 +1,9 @@
 doctype html
 html lang="en"
   head
-    = render "head"
+    == render "head"
+
   body class="#{page.data[:layout]} #{page.data[:page_class]}"
 
     main
-      = content
+      == content

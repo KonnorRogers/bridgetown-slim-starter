@@ -1,7 +1,5 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-
-layout: home
+layout: default
 ---
 
-Welcome to Bridgetown!
+Welcome to Bridgetown! Hi folks!
