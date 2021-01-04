@@ -8,8 +8,8 @@ const plugins = [
   [
     "@snowpack/plugin-run-script",
     {
-      name: "[Bridgetown] Serve",
-      cmd: "bundle exec bridgetown build",
+      name: "Bridgetown",
+      cmd: "bundle exec bridgetown serve",
       watch: "$1 --watch"
     }
   ]
@@ -23,7 +23,7 @@ const devOptions = {
   port: 4000,
   open: "none",
   output: "stream",
-  hmrDelay: 1000,
+  hmrDelay: 300,
 };
 
 const buildOptions = {

@@ -6,7 +6,7 @@
     "bridgetown-build": "BRIDGETOWN_ENV=production bundle exec bridgetown build",
     "bridgetown-serve": "bundle exec bridgetown serve",
     "build": "NODE_ENV=production BRIDGETOWN_ENV=production snowpack build",
-    "start": "snowpack dev",
+    "start": "snowpack build --watch --hmr",
     "prettier": "prettier **/*.{js,css,md,json} --ignore-path .gitignore",
     "lint:prettier": "yarn prettier --check",
     "lint:eslint": "eslint frontend/**/*.js --ignore-path .gitignore",
