@@ -26,3 +26,8 @@ yarn start
 yarn build
 ```
 
+## Where are my build files?
+
+`public` is the equivalent of `output`. This is your final build
+directory.
+
