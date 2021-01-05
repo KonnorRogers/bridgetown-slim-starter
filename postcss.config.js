@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === "production") {
       "./frontend/**/*.js",
       "./src/**/*.md",
       "./src/**/*.html",
-      "./src/**/*.liquid",
+      "./src/**/*.slim",
     ],
     defaultExtractor: (content) => {
       const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
