@@ -1,9 +1,12 @@
 const mount = {
   frontend: "/frontend",
+  bridgetown: "/",
+  public: { url: "/", static: true, resolve: false }
 };
 
 const plugins = [
-  ["@snowpack/plugin-postcss"],
+  ['@snowpack/plugin-build-script', { cmd: 'postcss', input: ['.css'], output: ['.css'] }],
+  ['@snowpack/plugin-run-script', { cmd: 'bridgetown build', watch: '$1 --watch' }]
 ];
 
 const installOptions = {
@@ -11,15 +14,17 @@ const installOptions = {
 };
 
 const devOptions = {
-  port: 4002,
+  port: 4000,
+  hmrDelay: 1000,
   open: "none",
   output: "stream",
   baseUrl: "/",
 };
 
 const buildOptions = {
-  metaDir: "frontend",
-  out: "output",
+  clean: true,
+  metaDir: "frontend/javascript",
+  out: "public",
 };
 
 module.exports = {
