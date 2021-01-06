@@ -1,2 +1,2 @@
-import'../styles/index.css'
+import "../styles/index.css"
 console.log("hi")
