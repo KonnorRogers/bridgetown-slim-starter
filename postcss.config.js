@@ -23,8 +23,6 @@ if (process.env.NODE_ENV === "production") {
   plugins["@fullhuman/postcss-purgecss"] = purgecss;
 }
 
-
-
 module.exports = {
   plugins
 };
