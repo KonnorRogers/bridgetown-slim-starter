@@ -15,7 +15,7 @@ const installOptions = {
 
 const devOptions = {
   port: 4000,
-  hmrDelay: 1000,
+  hmrDelay: 400,
   open: "none",
   output: "stream",
   baseUrl: "/",
