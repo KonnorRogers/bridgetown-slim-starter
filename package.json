@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "snowpack build",
+    "build": "NODE_ENV=production BRIDGETOWN_ENV=production snowpack build",
     "start": "snowpack dev",
     "prettier": "prettier **/*.{js,css,md,json} --ignore-path .gitignore",
     "lint:prettier": "yarn prettier --check",
