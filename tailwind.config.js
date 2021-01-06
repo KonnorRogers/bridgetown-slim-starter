@@ -7,16 +7,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     standardFontWeights: true,
   },
-  purge: {
-    enabled: process.env.BRIDGETOWN_ENV === 'production',
-    content: [
-      "./src/**/*.md",
-      "./src/**/*.html",
-      "./src/**/*.liquid",
-      "./frontend/javascript/**/*.js"
-    ],
-    options: {}
-  },
+  purge: {},
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
