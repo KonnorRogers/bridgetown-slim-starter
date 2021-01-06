@@ -2,10 +2,10 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   future: {
-    // defaultLineHeights: true,
-    // purgeLayersByDefault: true,
-    // removeDeprecatedGapUtilities: true,
-    // standardFontWeights: true,
+    defaultLineHeights: true,
+    purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true,
+    standardFontWeights: true,
   },
   purge: {
     enabled: process.env.BRIDGETOWN_ENV === 'production',
@@ -16,14 +16,6 @@ module.exports = {
       "./frontend/javascript/**/*.js"
     ],
     options: {}
-  },
-    content: [
-      "./output/**/*.html",
-      "./frontend/**/*.js",
-      "./src/**/*.md",
-      "./src/**/*.html",
-      "./src/**/*.liquid",
-    ],
   },
   presets: [],
   darkMode: false, // or 'media' or 'class'
