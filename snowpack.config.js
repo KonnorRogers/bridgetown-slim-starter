@@ -1,6 +1,6 @@
 const mount = {
   frontend: "/frontend",
-  bridgetown: "/",
+  output: "/",
   public: { url: "/", static: true, resolve: false }
 };
 
