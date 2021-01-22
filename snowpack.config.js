@@ -1,35 +1,41 @@
-const mount = {
-  frontend: "/frontend",
-  output: "/",
-};
+// Snowpack Configuration File
+// See all supported options: https://www.snowpack.dev/#configuration
 
-const plugins = [
-  // ['@snowpack/plugin-build-script', { cmd: 'postcss', input: ['.css'], output: ['.css'] }],
-  ["@snowpack/plugin-postcss"],
-  ['@snowpack/plugin-run-script', { cmd: 'bundle exec bridgetown build', watch: '$1 --watch' }]
-];
-
-const installOptions = {
-  NODE_ENV: true,
-};
-
-const devOptions = {
-  port: 4000,
-  hmrDelay: 1000,
-  output: "stream",
-  baseUrl: "/",
-};
-
-const buildOptions = {
-  clean: true,
-  metaDir: "frontend/javascript",
-  out: "public",
-};
-
+/** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
-  mount,
-  plugins,
-  installOptions,
-  devOptions,
-  buildOptions,
-};
+  mount: {
+    frontend: "/dist",
+    ".bridgetown": { url: "/", static: true },
+    output: { url: "/", static: true, resolve: false },
+  },
+  plugins: [
+    [
+      "@snowpack/plugin-run-script",
+      {
+        name: "bridgetown",
+        cmd: "bin/bridgetown build",
+        watch: "$1 --watch --quiet",
+      },
+    ],
+    "@snowpack/plugin-postcss",
+  ],
+  devOptions: {
+    port: 4000,
+    hmrDelay: 1000,
+    open: "none",
+  },
+  buildOptions: {
+    metaUrlPath: "output/dist/javascript",
+    out: "output"
+  },
+  optimize: {
+    entrypoints: ["dist/javascript/index.js"],
+    preload: false,
+    bundle: true,
+    splitting: false,
+    treeshake: true,
+    minify: true,
+    manifest: true,
+    target: "es2018",
+  },
+}

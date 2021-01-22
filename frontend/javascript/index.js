@@ -1,2 +1,1 @@
-import "../styles/index.css"
-console.log("hi")
+console.log("Hi from snowpack")

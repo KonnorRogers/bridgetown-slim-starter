@@ -7,7 +7,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     standardFontWeights: true,
   },
-  purge: {},
+  purge: [],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -24,17 +24,32 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
-      gray: colors.coolGray,
+      gray: {
+        ...colors.coolGray,
+        "light": "#FBFBFB",
+        "medium": "#52667C",
+        "neutral": "#8593A2",
+        "accent": "#D8D8D8"
+      },
       red: colors.red,
       yellow: colors.amber,
+      orange: {
+        700: "#dd6e06"
+      },
       green: colors.emerald,
       blue: colors.blue,
+      darkblue: {
+        300: "#2F97D1",
+        500: "#2a414d",
+        700: "#122b38",
+      },
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
     },
     spacing: {
       px: "1px",
+      "3px": "3px",
       0: "0px",
       0.5: "0.125rem",
       1: "0.25rem",
@@ -177,6 +192,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "Helvetica",
         "ui-sans-serif",
         "system-ui",
         "-apple-system",

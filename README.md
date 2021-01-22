@@ -1,4 +1,4 @@
-# Slim + Bridgetown + Tailwind + Hot Reloading (NOT HMR)
+# Frontend Redesign
 
 ## Requirements
 
@@ -9,8 +9,8 @@
 ## Getting started
 
 ```bash
-git clone https://github.com/ParamagicDev/bridgetown-slim-starter
-cd bridgetown-slim-starter
+git clone https://github.com/hoalife/frontend
+cd frontend
 bundle install && yarn install
 ```
 
@@ -20,14 +20,12 @@ bundle install && yarn install
 yarn start
 ```
 
+Then open up `localhost:4000`
+
 ### Production
 
 ```bash
 yarn build
 ```
 
-## Where are my build files?
-
-`public` is the equivalent of `output`. This is your final build
-directory.
-
+This will build to `output/`
